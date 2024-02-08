@@ -15,6 +15,7 @@ The CITY table is described as follows:
 SELECT * FROM CITY 
 WHERE POPULATION > 100000 AND COUNTRYCODE = 'USA';
 ```
+<br>
 
 # Revising the Select Query II
 
@@ -33,6 +34,7 @@ The CITY table is described as follows:
 SELECT NAME FROM CITY
 WHERE POPULATION > 120000 AND CountryCode = 'USA';
 ```
+<br>
 
 # Select All
 
@@ -50,6 +52,7 @@ The CITY table is described as follows:
 ```
 SELECT * FROM CITY;
 ```
+<br>
 
 # Select By ID
 
@@ -68,6 +71,7 @@ The CITY table is described as follows:
 SELECT * FROM CITY
 WHERE ID = 1661;
 ```
+<br>
 
 # Japanese Cities' Attributes
 
@@ -86,6 +90,7 @@ The CITY table is described as follows:
 SELECT * FROM CITY
 WHERE COUNTRYCODE = 'JPN';
 ```
+<br>
 
 # Japanese Cities' Names
 
@@ -104,6 +109,7 @@ The CITY table is described as follows:
 SELECT NAME FROM CITY
 WHERE COUNTRYCODE = 'JPN';
 ```
+<br>
 
 # Weather Observation Station 1
 
@@ -124,6 +130,7 @@ where LAT_N is the northern latitude and LONG_W is the western longitude.
 ```
 SELECT CITY,STATE FROM STATION;
 ```
+<br>
 
 # Weather Observation Station 3
 
@@ -145,6 +152,7 @@ where LAT_N is the northern latitude and LONG_W is the western longitude.
 SELECT DISTINCT(CITY) FROM STATION
 WHERE ID%2=0;
 ```
+<br>
 
 # Weather Observation Station 4
 
@@ -164,6 +172,7 @@ where LAT_N is the northern latitude and LONG_W is the western longitude.
 ```
 SELECT COUNT(CITY) - COUNT(DISTINCT(CITY)) FROM STATION;
 ```
+<br>
 
 # Weather Observation Station 5
 
@@ -194,6 +203,7 @@ SELECT CITY, LENGTH(CITY) FROM STATION
 ORDER BY LENGTH(CITY) DESC, CITY
 LIMIT 1;
 ```
+<br>
 
 # Weather Observation Station 6
 
@@ -233,6 +243,7 @@ SUBSTRING(CITY,1,1) IN ('A','E','I','O','U');
 SELECT DISTINCT CITY FROM STATION WHERE
 LEFT(CITY,1) IN ('A','E','I','O','U');
 ```
+<br>
 
 # Weather Observation Station 7
 
@@ -272,6 +283,7 @@ SUBSTRING(CITY,LENGTH(CITY),1) IN ('A','E','I','O','U');
 SELECT DISTINCT CITY FROM STATION WHERE
 RIGHT(CITY,1) IN ('A','E','I','O','U');
 ```
+<br>
 
 # Weather Observation Station 8
 
@@ -307,6 +319,7 @@ LEFT(CITY,1) IN ('A','E','I','O','U')
 AND
 RIGHT(CITY,1) IN ('A','E','I','O','U');
 ```
+<br>
 
 # Weather Observation Station 9
 
@@ -346,6 +359,7 @@ SUBSTRING(CITY,1,1) NOT IN ('A','E','I','O','U');
 SELECT DISTINCT CITY FROM STATION WHERE
 LEFT(CITY,1) NOT IN ('A','E','I','O','U');
 ```
+<br>
 
 # Weather Observation Station 10
 
@@ -385,6 +399,7 @@ SUBSTRING(CITY,LENGTH(CITY),1) NOT IN ('A','E','I','O','U');
 SELECT DISTINCT CITY FROM STATION WHERE
 RIGHT(CITY,1) NOT IN ('A','E','I','O','U');
 ```
+<br>
 
 # Weather Observation Station 11
 
@@ -427,11 +442,13 @@ LEFT(CITY,1) NOT IN ('A','E','I','O','U')
 OR
 RIGHT(CITY,1) NOT IN ('A','E','I','O','U');
 ```
+<br>
 
 
 # Weather Observation Station 12
 
 `Query the list of CITY names from STATION that either do not start with vowels or do not end with vowels. Your result cannot contain duplicates.`
+
 
 The STATION table is described as follows:
 | Field       |   Type     |
@@ -471,6 +488,7 @@ LEFT(CITY,1) NOT IN ('A','E','I','O','U')
 AND
 RIGHT(CITY,1) NOT IN ('A','E','I','O','U');
 ```
+<br>
 
 
 # Higher Than 75 Marks
@@ -492,6 +510,7 @@ SELECT NAME FROM STUDENTS
 WHERE MARKS > 75
 ORDER BY RIGHT(NAME,3), ID;
 ```
+<br>
 
 
 # Employee Names
@@ -513,6 +532,7 @@ where employee_id is an employee's ID number, name is their name, months is the 
 SELECT NAME FROM EMPLOYEE
 ORDER BY NAME;
 ```
+<br>
 
 # Employee Salaries 
 `Write a query that prints a list of employee names (i.e.: the name attribute) for employees in Employee having a salary greater than 2000 per month who have been employees for less than 10 months. Sort your result by ascending employee_id.`
@@ -533,3 +553,4 @@ SELECT NAME FROM EMPLOYEE
 WHERE SALARY > 2000 AND MONTHS < 10
 ORDER BY EMPLOYEE_ID;
 ```
+<br>
